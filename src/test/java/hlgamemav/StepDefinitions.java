@@ -256,9 +256,4 @@ public class StepDefinitions {
             exception = e;
         }
     }
-
-    @Then("The email sending should fail")
-    public void theEmailSendingShouldFail() {
-        assertEquals(exception.getClass(), UnsupportedOperationException.class);
-    }
 }
