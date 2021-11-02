@@ -4,15 +4,16 @@ import java.util.ArrayList;
 
 public class Game {
     private final String name;
-    private ArrayList<String> rules;
-    private ArrayList<Player> players;
+    private final ArrayList<Player> players = new ArrayList<>();
+    private ArrayList<String> rules = new ArrayList<>();
 
     public Game(String name) {
         this.name = name;
     }
 
     public void addPlayers(ArrayList<Player> players) throws Exception {
-        if ((this.players.size() + players.size()) > 5) throw new Exception("A game cannot contain more than 5 players");
+        if ((this.players.size() + players.size()) > 5)
+            throw new Exception("A game cannot contain more than 5 players");
         this.players.addAll(players);
     }
 

@@ -12,6 +12,10 @@ public class Platform {
         this.name = name;
     }
 
+    public void addLobbyToPlatform(Lobby lobby) {
+        lobbies.add(lobby);
+    }
+
     public void addGameToPlatform(Game game) {
         games.add(game);
     }

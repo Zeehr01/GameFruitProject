@@ -121,10 +121,10 @@ public class StepDefinitions {
     public void playerCreatesLobbies(int lobbyNb) {
         try {
             for (int i = 0; i < lobbyNb; i++) {
-                player.createLobby("Lobby " + i);
+                player.createLobby(platforms.get(0), "Lobby " + i);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            exception = e;
         }
     }
 
@@ -255,10 +255,5 @@ public class StepDefinitions {
         } catch (Exception e) {
             exception = e;
         }
-    }
-
-    @Then("The email sending should fail")
-    public void theEmailSendingShouldFail() {
-        assertEquals(exception.getClass(), UnsupportedOperationException.class);
     }
 }

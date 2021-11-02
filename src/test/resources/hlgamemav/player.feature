@@ -1,4 +1,4 @@
-Feature: Players should be able to manage other players in lobby
+Feature: Player handling
 
   Scenario: Add player to lobby
     Given a player, 1 platform, 1 lobby, 0 game and 1 other player on same platform

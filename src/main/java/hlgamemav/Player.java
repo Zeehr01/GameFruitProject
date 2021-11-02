@@ -14,18 +14,17 @@ public class Player {
         this.username = username;
     }
 
-    public void createLobby(String name) throws Exception {
+    public void createLobby(Platform platform, String name) throws Exception {
         if (lobbies.size() >= 10) throw new Exception("Could not create lobby (10 max per player)");
         Lobby lobby = new Lobby(name);
-        lobby.addPlayer(this);
         lobbies.add(lobby);
+        platform.addLobbyToPlatform(lobby);
     }
 
     public void removeLobby(Lobby lobby) throws Exception {
-        for (Player player : lobby.getPlayers()) {
-            if (player.lobbies.size() <= 1)
-                throw new Exception("Could not remove lobby, players should be at least in 1 lobby");
-        }
+        if (lobbies.size() <= 1)
+            throw new Exception("Could not remove lobby, player should at least be in 1 lobby");
+
         lobbies.remove(lobby);
     }
 
@@ -58,7 +57,7 @@ public class Player {
     }
 
     public void createFavouriteGameList(ArrayList<Game> games) throws Exception {
-        if (games.size() <= 1)
+        if (games.size() < 1)
             throw new Exception("Could not create favourite game list, it should contain at least 1 game");
         favouriteGames.addAll(games);
     }

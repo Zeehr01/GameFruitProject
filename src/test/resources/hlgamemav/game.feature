@@ -1,4 +1,4 @@
-Feature: Players should be able to manage games in lobby
+Feature: Game handling
 
   Scenario: Add game to lobby
     Given a player, 1 platform, 1 lobby, 1 game and 0 other player on same platform
