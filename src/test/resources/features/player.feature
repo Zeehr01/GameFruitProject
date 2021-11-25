@@ -70,3 +70,10 @@ Feature: Player handling
     Given a player, 0 platform, 0 lobby, 0 game and 0 other player
     When Player invites a new player
     Then An exception is thrown with message "Not implemented yet"
+
+    Scenario: get into fruitStore or game
+      Given a customer
+      When you get into a store
+      Then Get your profession<profession>
+      And  you will know if you get into the game
+      And  or into the fruitStore

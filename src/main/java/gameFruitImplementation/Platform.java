@@ -1,4 +1,4 @@
-package hlgamemav;
+package gameFruitImplementation;
 
 import java.util.ArrayList;
 

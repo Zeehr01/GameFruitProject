@@ -1,11 +1,11 @@
-package hlgamemav;
+package gameFruitImplementation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static hlgamemav.Platform.isGameOnPlatform;
-import static hlgamemav.Platform.isPlayerOnPlatform;
+import static gameFruitImplementation.Platform.isGameOnPlatform;
+import static gameFruitImplementation.Platform.isPlayerOnPlatform;
 
 public class Lobby {
     private final String name;

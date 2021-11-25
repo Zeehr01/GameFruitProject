@@ -1,4 +1,4 @@
-package hlgamemav;
+package gameFruitImplementation;
 
 public enum Color {
     RED,

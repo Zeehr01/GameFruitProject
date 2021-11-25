@@ -1,10 +1,10 @@
-package hlgamemav;
+package gameFruitImplementation;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Player {
-    private final String username;
+public class Player extends Customer {
+    private String username;
     private int score;
     private Color color;
     private final ArrayList<Lobby> lobbies = new ArrayList<>();
@@ -12,6 +12,10 @@ public class Player {
 
     public Player(String username) {
         this.username = username;
+    }
+
+    public Player() {
+
     }
 
     public void createLobby(Platform platform, String name) throws Exception {
@@ -96,5 +100,20 @@ public class Player {
 
     public ArrayList<Game> getFavouriteGames() {
         return favouriteGames;
+    }
+
+    @Override
+    public String getProfession() {
+        return "Player";
+    }
+
+    @Override
+    public boolean goToGame() {
+        return true;
+    }
+
+    @Override
+    public boolean goToFruit() {
+        return false;
     }
 }
